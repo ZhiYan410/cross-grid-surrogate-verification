@@ -1,0 +1,44 @@
+{
+  "release_note": "Canonical release configuration reconstructed from the locked final protocol and final implementation.",
+  "benchmark": "PDEBench DarcyFlow beta=1.0",
+  "split": "splits/darcy_beta1.0__seed0001__N8000_1000_1000.json",
+  "split_counts": {
+    "train": 8000,
+    "validation": 1000,
+    "test": 1000
+  },
+  "training_resolutions": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "evaluation_resolutions": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "epochs": 50,
+  "batch_size": 16,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0,
+  "checkpoint_selection": "minimum validation mean relative L2 at resolution 128",
+  "resampling": {
+    "downsampling": "area",
+    "upsampling": "bilinear",
+    "align_corners": false
+  },
+  "architecture": "unet",
+  "input": "coefficient",
+  "model": {
+    "base_channels": 32,
+    "depth": 4
+  }
+}

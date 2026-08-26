@@ -1,0 +1,19 @@
+comparison_type,architecture,architecture_first,architecture_second,metric,estimate,ci95_low,ci95_high,difference_definition,train_grid,evaluation_grid,conditioning_sample_count,bootstrap_replicates,bootstrap_seed
+within_architecture_native_metric,FNO,,,joint_rel_l2,0.0134544978111,0.0134037155453,0.0135144195688,,128x32,200x50,75.0,10000.0,20260801.0
+within_architecture_native_metric,FNO,,,vector_h1_seminorm_rel,1.42321967468,1.41971449823,1.42713713146,,128x32,200x50,75.0,10000.0,20260801.0
+within_architecture_native_metric,FNO,,,nonpositive_j_fraction,0.0125033329915,0.0122512676762,0.0127658701672,,128x32,200x50,75.0,10000.0,20260801.0
+within_architecture_native_metric,ResNet,,,joint_rel_l2,0.210018964434,0.209629719932,0.210472671717,,128x32,200x50,75.0,10000.0,20260801.0
+within_architecture_native_metric,ResNet,,,vector_h1_seminorm_rel,1.05199346314,1.04132266952,1.06443520315,,128x32,200x50,75.0,10000.0,20260801.0
+within_architecture_native_metric,ResNet,,,nonpositive_j_fraction,0.00115361387436,0.000846397520482,0.00148816645586,,128x32,200x50,75.0,10000.0,20260801.0
+within_architecture_native_metric,U-Net,,,joint_rel_l2,0.426628056816,0.425600228226,0.427743176369,,128x32,200x50,75.0,10000.0,20260801.0
+within_architecture_native_metric,U-Net,,,vector_h1_seminorm_rel,1.97686172021,1.96166373878,1.99414266832,,128x32,200x50,75.0,10000.0,20260801.0
+within_architecture_native_metric,U-Net,,,nonpositive_j_fraction,0.0059558563794,0.0054093369341,0.00652743308379,,128x32,200x50,75.0,10000.0,20260801.0
+paired_architecture_difference,,FNO,U-Net,joint_rel_l2,-0.413173559005,-0.414265609723,-0.412150488417,first minus second; lower error is better except min_det_f,128x32,200x50,75.0,10000.0,
+paired_architecture_difference,,FNO,U-Net,vector_h1_seminorm_rel,-0.553642045535,-0.571089169695,-0.536660770857,first minus second; lower error is better except min_det_f,128x32,200x50,75.0,10000.0,
+paired_architecture_difference,,FNO,U-Net,nonpositive_j_fraction,0.00654747661209,0.00616734465981,0.00691485773539,first minus second; lower error is better except min_det_f,128x32,200x50,75.0,10000.0,
+paired_architecture_difference,,FNO,ResNet,joint_rel_l2,-0.196564466623,-0.196979433832,-0.196202920333,first minus second; lower error is better except min_det_f,128x32,200x50,75.0,10000.0,
+paired_architecture_difference,,FNO,ResNet,vector_h1_seminorm_rel,0.371226211538,0.359130196975,0.382403725282,first minus second; lower error is better except min_det_f,128x32,200x50,75.0,10000.0,
+paired_architecture_difference,,FNO,ResNet,nonpositive_j_fraction,0.0113497191171,0.0111022231338,0.0115798949396,first minus second; lower error is better except min_det_f,128x32,200x50,75.0,10000.0,
+paired_architecture_difference,,U-Net,ResNet,joint_rel_l2,0.216609092382,0.21544808521,0.217810583858,first minus second; lower error is better except min_det_f,128x32,200x50,75.0,10000.0,
+paired_architecture_difference,,U-Net,ResNet,vector_h1_seminorm_rel,0.924868257073,0.913046229647,0.937070826264,first minus second; lower error is better except min_det_f,128x32,200x50,75.0,10000.0,
+paired_architecture_difference,,U-Net,ResNet,nonpositive_j_fraction,0.00480224250504,0.00442483392017,0.00520655431352,first minus second; lower error is better except min_det_f,128x32,200x50,75.0,10000.0,

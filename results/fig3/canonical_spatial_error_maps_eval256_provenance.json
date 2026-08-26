@@ -1,0 +1,23 @@
+{
+  "artifact": "canonical_spatial_error_maps_eval256.npz",
+  "composition": "The canonical public Fig. 3 dataset uses the mean of three corrected FNO maps at validation resolution 128 for each training resolution and the locked U-Net/ResNet ensemble maps. The obsolete FNO channel in the unchanged architecture source is not used. The two upstream source artifacts are archived privately; this canonical NPZ is the authoritative public processed Fig. 3 dataset.",
+  "sources": [
+    {
+      "file": "corrected_avg_spatial_error_maps_eval256.npz",
+      "sha256": "5005A11054183300F9A6A80B7898922EE8EFAD7BDB9EA39A589DA9A121B02B26",
+      "selection": "maps keyed by (train, 128, seed), mean over seeds 0001-0003"
+    },
+    {
+      "file": "avg_spatial_error_maps_eval256.npz",
+      "sha256": "61697FD5EC9237C480C6771EC3F5344B82F1580DF32DD57F89082600B4B4EF87",
+      "selection": "ensemble_mean_abs_error architecture indices 1 and 2 only"
+    }
+  ],
+  "output_sha256": "4BC8BA60974458E93E38F9E081DA94B85EA71225734BB4FA28C4C943B5ED0654",
+  "shape": [
+    3,
+    4,
+    256,
+    256
+  ]
+}

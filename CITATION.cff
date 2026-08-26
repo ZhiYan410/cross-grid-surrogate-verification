@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or the locked processed results, please cite the associated paper. Preferred-citation metadata is pending a publication DOI."
+title: "Empirical Cross-Grid Verification of Data-Driven Surrogate Models for Darcy Flow and Hyperelasticity"
+type: software
+version: 0.2.0-release-candidate
+date-released: 2026-08-26
+authors:
+  - family-names: Zhi
+    given-names: Yan
+  - family-names: Li
+    given-names: Hongtao
+  - family-names: Li
+    given-names: Gao
+  - family-names: Zheng
+    given-names: Yang
+  - family-names: Teng
+    given-names: Yu
+  - family-names: Tang
+    given-names: Gui

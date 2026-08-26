@@ -1,0 +1,54 @@
+{
+  "release_note": "Canonical release configuration reconstructed from the locked final protocol and final implementation.",
+  "benchmark": "VINO Mooney-Rivlin hyperelastic beam",
+  "dataset_filename": "Hyperelasticity_n550_mooneyrivlin_200X50.npz",
+  "dataset_sha256": "E7D7821BD7295243F46C708BE360004408FA343D87536E25126BAEBE5704F599",
+  "split": "splits/vino_hyperelasticity_split_seed0001_N400_75_75.json",
+  "split_counts": {
+    "train": 400,
+    "validation": 75,
+    "test": 75
+  },
+  "evaluation_grids": [
+    {
+      "nx": 64,
+      "ny": 16
+    },
+    {
+      "nx": 128,
+      "ny": 32
+    },
+    {
+      "nx": 200,
+      "ny": 50
+    }
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "epochs": 50,
+  "batch_size": 16,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0,
+  "training_loss": "equal-weight MSE over train-standardized ux and uy",
+  "checkpoint_selection": "minimum decoded validation mean joint-vector relative L2 at the training grid",
+  "interpolation": {
+    "traction": "endpoint-preserving linear, align_corners=True, repeated in x",
+    "displacement": "endpoint-preserving bilinear, align_corners=True",
+    "native_200x50": "direct"
+  },
+  "left_clamp_projection": "physical u=(0,0) represented exactly in standardized coordinates",
+  "architecture": "unet",
+  "training_grid": {
+    "nx": 64,
+    "ny": 16
+  },
+  "model": {
+    "base_channels": 32,
+    "depth": 4,
+    "padding": "high-index replicate to multiple of 16, exact crop"
+  }
+}
